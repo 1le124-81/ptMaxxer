@@ -1,3 +1,5 @@
+(BROKEN)
+
 When run, it uses a python module (pytautogui) to replicate the inputs usually needed to get microsoft reward points. Currently it runs 35 searches and clicks each item on the daily set. This gives at least 180 points daily (150 points max for searching, at least 30 for daily sets). 
 
 There are also streaks for every day you do the daily set, which give you more points the longer the streak is. I do not know the rate at which the points increase but it is substantial enough that the script needs to be run daily to be effective.
