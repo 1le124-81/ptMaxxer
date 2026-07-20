@@ -1,4 +1,4 @@
-(BROKEN)
+(fixed for now?)
 
 When run, it uses a python module (pytautogui) to replicate the inputs usually needed to get microsoft reward points. Currently it runs 35 searches and clicks each item on the daily set. This gives at least 180 points daily (150 points max for searching, at least 30 for daily sets). 
 
@@ -8,6 +8,6 @@ The code itself is relatively primitive, with it just being simple coordinated c
 
 Requires pyautogui. display scale set to 150% in this code, probably not compatible with most devices.
 
-Replicates input at a human pace, not overly speedy or effective.
+Replicates input at a human pace, not overly speedy or effective. meant to be simple and replicate human input.
 
 Requires lot of configuration.
