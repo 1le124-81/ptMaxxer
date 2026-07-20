@@ -3,7 +3,7 @@ print("hi, the code is starting")
 import time
 import random
 import pyautogui
-import keyboard
+
 time.sleep(5)  # gives you 5 seconds  to switch to the desired window
 SCALE = 1.5  # default 150% bc that's what i have on my comp 150% scaling on Windows
 
@@ -27,7 +27,7 @@ for i in range(20) :
 
     pyautogui.press("enter")
 
-    time.sleep(3)
+    time.sleep(5)
 
 scaled_click(140, 60) # click back on search bar
 
