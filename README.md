@@ -11,3 +11,11 @@ Requires pyautogui. display scale set to 150% in this code, probably not compati
 Replicates input at a human pace, not overly speedy or effective. meant to be simple and replicate human input.
 
 Requires lot of configuration.
+
+pointMaxxerV3:
+(it's called v3 bcz i didnt post v1 on here)
+structure is the same except there's an option to shut down computer and my monitor after running the code.
+
+new required technologies: ControlMyMonitor.exe, python subprocess. Uses subprocess to run the powershell command stop-computer and runs another command with ControlMyMonitor to change the power state of the specified monitor, shutting it off.
+
+youll proly have to change the ControlMyMonitor part so it names ur actual monitor and power mode may not be specified as D6 on all monitors.
