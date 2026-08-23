@@ -19,3 +19,5 @@ structure is the same except there's an option to shut down computer and my moni
 new required technologies: ControlMyMonitor.exe, python subprocess. Uses subprocess to run the powershell command stop-computer and runs another command with ControlMyMonitor to change the power state of the specified monitor, shutting it off.
 
 youll proly have to change the ControlMyMonitor part so it names ur actual monitor and power mode may not be specified as D6 on all monitors.
+
+Delete the stuff with the shutdown if u dont want it.
