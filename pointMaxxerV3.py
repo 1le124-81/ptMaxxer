@@ -1,5 +1,4 @@
 #made it so it aligned with daily poll. very brute forcy. I was thinking of using pytesseract text recognition but works for now.
-#breaks bcz is random color every day. align with the speech bubbles instead.
 print("code starting")
 
 import time
