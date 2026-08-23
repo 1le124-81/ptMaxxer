@@ -1,3 +1,5 @@
+#made it so it aligned with daily poll. very brute forcy. I was thinking of using pytesseract text recognition but works for now.
+#breaks bcz is random color every day. align with the speech bubbles instead.
 print("code starting")
 
 import time
@@ -42,7 +44,7 @@ pyautogui.press("enter")
 time.sleep(5)
 
 # daily set sytem
-scaled_move_to(150, 570)
+scaled_move_to(900, 570)
 print("daily set initalized")
 while True:
     x, y = pyautogui.position()
@@ -52,11 +54,11 @@ while True:
     
     pyautogui.scroll(-10)
     
-    if r == 16 and g == 124 and b == 16:
-        print("green detected, exiting loop.")
+    if b > r + 50 and b > g + 50: #detects blue color of speech bubbles in daily set.
+        print("blue detected, exiting loop.")
         break
 
-scaled_move_to(300, 565)
+scaled_move_to(175, 488)
 
 x, y = pyautogui.position()
 r, g, b = pyautogui.pixel(x,y)
