@@ -18,7 +18,7 @@ def scaled_move_to(x, y):
 
 def scaled_click(x, y):
     pyautogui.click(int(x * SCALE), int(y * SCALE))
-
+""""
 scaled_move_to(567, 389) # where the search bar is on my computer
 
 # searches up somethign different 20 times (20*5 = 100 pts, max pts from search daily is 100.)
@@ -41,7 +41,7 @@ pyautogui.write("https://rewards.bing.com/dashboard", interval=0.05) # go to ms 
 time.sleep(1)
 pyautogui.press("enter")
 time.sleep(5)
-
+"""
 # daily set sytem
 scaled_move_to(900, 570)
 print("daily set initalized")
@@ -53,11 +53,11 @@ while True:
     
     pyautogui.scroll(-10)
     
-    if b > r + 50 and b > g + 50: #detects blue color of speech bubbles in daily set.
+    if b > r + 50 and b > g + 50 or r == 28 and g == 34 and b == 49: #detects blue color of speech bubbles in daily set.
         print("blue detected, exiting loop.")
         break
 
-scaled_move_to(175, 488)
+scaled_move_to(191, 583)
 
 x, y = pyautogui.position()
 r, g, b = pyautogui.pixel(x,y)
@@ -65,7 +65,7 @@ print(f"({r}, {g}, {b})")
 # detects if daily set dropdown is open, if not, it opens it
 if r == 28 and g == 34 and b == 49:
     print("dropdown detected as closed, opening it.")
-    scaled_click(1200, 565)
+    scaled_click(1202, 581)
 
 # clicks the 3 daily set elements
 time.sleep(2)
