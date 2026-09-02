@@ -53,7 +53,7 @@ while True:
     
     pyautogui.scroll(-10)
     
-    if b > r + 50 and b > g + 50 or r == 28 and g == 34 and b == 49: #detects blue color of speech bubbles in daily set.
+    if b > r + 150 and b > g + 100 or r == 28 and g == 34 and b == 49: #detects blue color of speech bubbles in daily set.
         print("blue detected, exiting loop.")
         break
 
