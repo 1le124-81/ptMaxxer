@@ -42,42 +42,38 @@ time.sleep(1)
 pyautogui.press("enter")
 time.sleep(5)
 
-# daily set sytem
-scaled_move_to(900, 570)
-print("daily set initalized")
-while True:
-    x, y = pyautogui.position()
+def dailySet():
+    # daily set sytem
+    scaled_move_to(900, 570)
+    print("daily set initalized")
+    while True:
+        x, y = pyautogui.position()
 
-    r, g, b = pyautogui.pixel(x,y)
-    print(f"({r}, {g}, {b})")
-    
-    pyautogui.scroll(-10)
-    
-    if b > r + 150 and b > g + 100 or r == 28 and g == 34 and b == 49: #detects blue color of speech bubbles in daily set.
-        print("blue detected, exiting loop.")
-        break
+        r, g, b = pyautogui.pixel(x,y)
+        print(f"({r}, {g}, {b})")
+        
+        pyautogui.scroll(-10)
+        
+        if b > r + 150 and b > g + 100: #detects blue color of speech bubbles in daily set
+            print("blue detected, exiting loop.")
+            break
+        
+dailySet()
+
+print("clickign elemenents")
+time.sleep(2)
+scaled_click(350, 600)
+time.sleep(1)
+scaled_click(100, 4)
+time.sleep(1)
+scaled_click(775, 600)
+time.sleep(1)
+scaled_click(100, 4)
+time.sleep(1)
+scaled_click(1000, 600)
 
 scaled_move_to(191, 583)
 
-x, y = pyautogui.position()
-r, g, b = pyautogui.pixel(x,y)
-print(f"({r}, {g}, {b})")
-# detects if daily set dropdown is open, if not, it opens it
-if r == 28 and g == 34 and b == 49:
-    print("dropdown detected as closed, opening it.")
-    scaled_click(1202, 581)
-
-# clicks the 3 daily set elements
-time.sleep(2)
-scaled_click(350, 630)
-time.sleep(1)
-scaled_click(100, 4)
-time.sleep(1)
-scaled_click(775, 630)
-time.sleep(1)
-scaled_click(100, 4)
-time.sleep(1)
-scaled_click(1000, 630)
 
 if shutdown_after:
     print("Turning off monitor...")
