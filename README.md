@@ -21,3 +21,5 @@ new required technologies: ControlMyMonitor.exe, python subprocess. Uses subproc
 youll proly have to change the ControlMyMonitor part so it names ur actual monitor and power mode may not be specified as D6 on all monitors.
 
 Delete the stuff with the shutdown if u dont want it.
+
+Have edge fullscreened on primary monitor, both dropdowns open.
