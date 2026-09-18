@@ -71,11 +71,12 @@ time.sleep(1)
 scaled_click(100, 4)
 time.sleep(1)
 scaled_click(1000, 600)
+time.sleep(1)
+scaled_click(100, 4)
+time.sleep(5)
+pyautogui.moveTo(1462, 909)
 
-scaled_move_to(191, 583)
-
-
-if shutdown_after:
+if shutdown_after and pyautogui.pixel(1462, 909) == (16, 124, 16):
     print("Turning off monitor...")
     subprocess.run([ # shuts down monitor using ControlMyMonitor.exe
         r"C:\Users\lukes\OneDrive\Desktop\controlmymonitor\ControlMyMonitor.exe",
@@ -93,3 +94,5 @@ if shutdown_after:
         "-Command",
         "Stop-Computer"
     ])
+else:
+    print('code finished runnign')
